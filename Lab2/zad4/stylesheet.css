@@ -1,0 +1,39 @@
+main {
+    height: 100%;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1000px;
+}
+
+input {
+    width: 250px;
+
+}
+canvas {
+    width: 100%;
+    height: auto;
+}
+.col-12 {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 35px;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+}
+
+#legenda {
+    margin:30px;
+}
+
+#cons {
+    margin: 20px;
+    border-color: blueviolet;
+    border-width: 2px;
+    border-radius: 2px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Page title
+    </title>
+</head>
+
+<body>
+    <main>
+        <h1>
+            Płótno
+        </h1>
+
+        <h1>
+            Canvas
+        </h1>
+
+        <canvas id="canvas-rectangle" width="500" height="200">
+            Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas" / It looks like your browser does not
+            support the "canvas" element
+        </canvas>
+        <canvas id="canvas-circle" width="300" height="150">
+            Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas" / It looks like your browser does not
+            support the "canvas" element
+        </canvas>
+        <canvas id="canvas-triangle" width="500" height="500">
+            Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas" / It looks like your browser does not
+            support the "canvas" element
+        </canvas>
+
+        <script>
+            //Prostokąt
+            var canvasrec = document.getElementById('canvas-rectangle');
+            var ctxrec = canvasrec.getContext('2d');
+            ctxrec.beginPath();
+            ctxrec.strokeStyle = "blue";
+            ctxrec.rect(30, 20, 200, 100);
+            ctxrec.stroke();
+
+
+            //Okrąg
+            var canvascir = document.getElementById("canvas-circle");
+            var ctxcir = canvascir.getContext("2d");
+            ctxcir.beginPath();
+            ctxcir.arc(180, 80, 65, 0, 10 * Math.PI);
+            ctxcir.strokeStyle = "blue";
+            ctxcir.stroke();
+
+            //Trójąt (czyli 3 linie)
+            var canvasline = document.getElementById("canvas-triangle");
+            ctxline = canvasline.getContext('2d');
+            ctxline.beginPath();
+            ctxline.moveTo(125, 20);
+            ctxline.lineTo(200, 200);
+            ctxline.lineTo(50, 200);
+            ctxline.closePath();
+            ctxline.strokeStyle="blue";
+
+            ctxline.stroke();
+        </script>
+    </main>
+</body>
+
+</html>

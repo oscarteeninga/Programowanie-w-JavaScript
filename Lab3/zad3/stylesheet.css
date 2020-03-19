@@ -1,0 +1,23 @@
+th, tr {
+    text-align: center;
+}
+
+
+.game-table {
+    width: 40%; 
+    margin-left:30%; 
+    margin-right:30%;
+}
+
+#one, #two, #three {
+    text-align: left;
+}
+
+div {
+    padding: 0px;
+    margin: 0px;
+}
+
+#canvas-field {
+    border: 2px solid darkblue;
+}

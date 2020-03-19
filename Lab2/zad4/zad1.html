@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-book "></i> Słownik angielsko-polski</a>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-12  col-md-4 offset-md-1">
+                <form name="fm">
+                    <input name="pole_tekstowe" type="text"><br>
+                    <input type="button" value="Dodaj słowo" onclick="addToDictionary()"><br>
+                    <input type="button" value="Dodaj tłumaczenie" onclick="addTranslation()"><br>
+                    <input type="button" value="Wypisz tłumaczenie" onclick="printTranslation()"><br>
+                    <input type="button" value="Usuń" onclick="del()">
+                </form>
+
+                <div id="cons">
+                </div>
+
+                <div id="status">
+                </div>
+            </div>
+            <div class='col-sm-10 col-md-6 offset-sm-1 offset-md-0 w-100'>
+                    <canvas id="canvas-plot" width="500px" height="500px"></canvas>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 offset-md-5">
+                <h3> Ilość znaczeń/wystąpienia</h3>
+                <div id="legenda">
+                </div>
+            </div>
+        </div>
+        <div class = "col-sm-12 col-md-4 offset-md-1" id="mocha">
+        </div>
+        <script src="https://unpkg.com/chai/chai.js"></script>
+        <script src="https://unpkg.com/mocha/mocha.js"></script>
+        <script class="mocha-init">
+
+            mocha.setup('bdd');
+            mocha.checkLeaks();
+        </script>
+        <script src="plot.js"></script>
+        <script src="script.js"></script>
+        <script src="test.js"></script>
+        <script class="mocha-exec">
+            mocha.run();
+        </script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </main>
+    <footer>
+        </div>
+        <div id="status">
+    </footer>
+</body>
+
+</html>

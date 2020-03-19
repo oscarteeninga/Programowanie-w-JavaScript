@@ -1,0 +1,48 @@
+div {
+  text-align: center;
+}
+
+
+div :hover {
+  opacity: 0.95;
+}
+
+.formated-image {
+  max-width: 90%;
+  margin: 10px;
+}
+
+#animated {
+  width: 150px;
+  height: auto;
+  animation: ani 2s alternate infinite
+}
+
+.middleelement {
+  position: absolute;
+  top: 200px;
+}
+
+@keyframes ani {
+  from {
+      position:absolute;
+      top: 200px;
+  }
+  to {
+      position:absolute;
+      bottom: 200px;
+      right: 0px;
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    position:absolute;
+    top: 200px;
+}
+to {
+    position:absolute;
+    bottom: 200px;
+    right: 0px;
+}
+}

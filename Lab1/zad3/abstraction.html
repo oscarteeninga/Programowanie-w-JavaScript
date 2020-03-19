@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>
+        Thinking in Java
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-gavel "></i>Java Tutorial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduce.html">Introduce</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Objects
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="abstraction.html">Abstraction</a>
+                            <a class="dropdown-item" href="interfaces.html">Interfaces</a>
+                            <a class="dropdown-item" href="hierarchy.html">Hierarchy</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="summarry.html">Summary</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="operators.html">Operators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="author.html">Author</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 offset-md-3 w-100">
+                <h1> Abstraction </h1>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                    All programming languages provide abstractions. It can be argued that the complexity of the
+                    problems you’re able to solve is directly related to the kind and quality of abstraction. By
+                    “kind” I mean, “What is it that you are abstracting?” Assembly language is a small abstraction
+                    of the underlying machine. Many so-called “imperative” languages that followed (such as
+                    FORTRAN, BASIC, and C) were abstractions of assembly language. These languages are big
+                    improvements over assembly language, but their primary abstraction still requires you to
+                    think in terms of the structure of the computer rather than the structure of the problem you
+                    are trying to solve. The programmer must establish the association between the machine
+                    model (in the “solution space,” which is the place where you’re implementing that solution,
+                    such as a computer) and the model of the problem that is actually being solved (in the 
+                    “problem space,” which is the place where the problem exists, such as a business). The effort
+                    required to perform this mapping, and the fact that it is extrinsic to the programming
+                    language, produces programs that are difficult to write and expensive to maintain, and as a
+                    side effect created the entire “programming methods” industry.
+
+                    The alternative to modeling the machine is to model the problem you’re trying to solve. Early
+                    languages such as LISP and APL chose particular views of the world (“All problems are
+                    ultimately lists” or “All problems are algorithmic,” respectively). Prolog casts all problems
+                    into chains of decisions. Languages have been created for constraint-based programming and
+                    for programming exclusively by manipulating graphical symbols. (The latter proved to be too
+                    restrictive.) Each of these approaches may be a good solution to the particular class of
+                    problem they’re designed to solve, but when you step outside of that domain they become
+                    awkward.
+
+                    The object-oriented approach goes a step further by providing tools for the programmer to
+                    represent elements in the problem space. This representation is general enough that the
+                    programmer is not constrained to any particular type of problem. We refer to the elements in
+                    the problem space and their representations in the solution space as “objects.” (You will also
+                    need other objects that don’t have problem-space analogs.) The idea is that the program is
+                    allowed to adapt itself to the lingo of the problem by adding new types of objects, so when
+                    you read the code describing the solution, you’re reading words that also express the
+                    problem. This is a more flexible and powerful language abstraction than what we’ve had
+                    before.1 Thus, OOP allows you to describe the problem in terms of the problem, rather than
+                    in terms of the computer where the solution will run. There’s still a connection back to the
+                    computer: Each object looks quite a bit like a little computer—it has a state, and it has
+                    operations that you can ask it to perform. However, this doesn’t seem like such a bad analogy
+                    to objects in the real world—they all have characteristics and behaviors. 
+                </pre>
+            </div>
+    </main>
+
+    <footer>
+        <!-- Tutaj treść stopki / Here the content of the footer -->
+        <h4>Oscar Teeninga </h4>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

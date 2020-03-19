@@ -1,0 +1,98 @@
+aside  {
+    width: 400px;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 64px;
+}
+
+footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header {  
+}
+
+main {
+    width: 435px;
+}
+
+nav {
+    width: 115px;
+}
+
+nav ul {
+    /* Specyfikacja wyglądu / Specification of the appearance */
+}
+nav li {
+    /* Specyfikacja wyglądu / Specification of the appearance */
+}
+
+.azure {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #A8A8A8;
+    background-color: #EFF;
+    margin: 10px;
+    padding-left: 10px;
+    box-shadow: 0 0 5px 1px #A8A8A8;
+}
+
+.singleline {
+    line-height: 7px; 
+}
+
+.longtext {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    white-space: pre-line;
+}
+
+.coloranimated {
+    animation: coloranimation 1500ms infinite alternate;
+    -webkit-animation: webkitcoloranimation 1500ms infinite alternate;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    header {
+        color: red;
+    }
+    aside {
+        width: 300px;
+    }
+}
+@media (max-width: 767px) {
+    header {
+        color: blue;
+    }
+    aside {
+        width: 200px;
+    }
+}
+
+@keyframes coloranimation {
+    0% {
+        color:red;
+    }
+    33% {
+        color: red;
+    }
+    100% {
+        color: blue;
+    }
+    /* Ustawienie takich proporcji pozwoliło uzyskać płynną animację */
+}
+
+@-webkit-keyframes webkitcoloranimation {
+    0% {
+        color:red;
+    }
+    33% {
+        color: red;
+    }
+    100% {
+        color: blue;
+    }
+}
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="sheet.css">
+    <title>
+        Wirtualna Uczelnia
+    </title>
+</head>
+
+<body>
+    <div class="w3-bar w3-dark-grey w3-hide-small">
+        <a href="#" class="w3-bar-item w3-button  w3-green">Wirtualna Uczelnia</a>
+        <a href="#" class="w3-bar-item w3-button ">Plan Zajęć</a>
+        <a href="#" class="w3-bar-item w3-button ">Oceny</a>
+        <div class="w3-dropdown-click">
+            <button onclick="myFunction1()" class="w3-button w3-dark-grey">Kierunki <i
+                    class="fa fa-caret-down"></i></button>
+            <div id="Demo1" class="w3-dropdown-content w3-bar-block w3-border">
+                <a href="#" class="w3-bar-item w3-button ">Informatyka</a>
+                <a href="#" class="w3-bar-item w3-button ">Elektronika</a>
+                <a href="#" class="w3-bar-item w3-button ">EiT</a>
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-blue w3-right">Zaloguj</a>
+    </div>
+
+    <div class="w3-bar w3-dark-grey w3-hide-large w3-hide-medium">
+        <div class="w3-dropdown-click w3-mobile">
+            <button onclick="myFunction3()" class="w3-button w3-dar-grey"><i class="fa fa-bars"></i></button>
+            <div id="Demo3" class="w3-dropdown-content w3-bar-block w3-dark-grey">
+                <a href="#" class="w3-bar-item w3-button w3-green">Wirtualna Uczelnia</a>
+                <a href="#" class="w3-bar-item w3-button">Plan Zajęć</a>
+                <a href="#" class="w3-bar-item w3-button">Oceny</a>
+                <div class="w3-dropdown-click w3-mobile">
+                    <button onclick="myFunction2()" class="w3-button w3-dark-grey w3-mobile">Kierunki <i
+                            class="fa fa-caret-down"></i></button>
+                    <div id="Demo2" class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="#" class="w3-bar-item w3-button w3-mobile">Informatyka</a>
+                        <a href="#" class="w3-bar-item w3-button w3-mobile">Elektronika</a>
+                        <a href="#" class="w3-bar-item w3-button w3-mobile">EiT</a>
+                    </div>
+                </div>
+                <a href="#" class="w3-bar-item w3-button w3-blue w3-right">Zaloguj</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-hide-large w3-hide-medium">
+        <div class="w3-col s12">
+            <h1>
+                Wydział IET
+            </h1>
+        </div>
+        <div class="w3-col s4">
+            <div class="w3-auto w3-green w3-round w3-padding-16 mainmargin">
+                <h3> Informatyka </h3>
+                <img src="informatyka.png" class="w3-opacity-min formated-image">
+                <pre-line>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci nibh. Quisque dapibus quam
+                    massa, eget dignissim mauris tincidunt et. Suspendisse facilisis scelerisque urna, quis bibendum
+                    eros
+                    ullamcorper id. Aenean molestie sed felis blandit iaculis. Vivamus faucibus pharetra ligula et
+                    condimentum. Morbi accumsan rhoncus vulputate. Sed porta condimentum tempor. Nullam sed ultrices
+                    risus.
+                    Nam ullamcorper lectus ac nulla hendrerit, quis efficitur purus dictum.
+                    </pre>
+            </div>
+        </div>
+        <div class="w3-col s4">
+            <div class="w3-auto w3-green w3-round w3-padding-16 mainmargin">
+                <h3> EiT</h3>
+                <img src="elektronika.png" class="w3-opacity-min formated-image">
+                <pre-line>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor metus leo, et vehicula ex
+                    imperdiet vel. Pellentesque blandit, massa a blandit fringilla, mi velit commodo quam, id placerat
+                    nibh
+                    ex sit amet tortor. Donec rutrum lacus enim, sed tincidunt neque consectetur eu. Integer dignissim
+                    blandit lacus, sit amet iaculis eros convallis in. Nunc consectetur lacus molestie massa convallis
+                    laoreet. Cras massa tortor, dapibus eu dolor in, lobortis fermentum nisi. Cras non arcu molestie,
+                    consectetur elit id, ornare ex. Maecenas posuere nulla efficitur finibus mattis. Donec laoreet
+                    fringilla
+                    enim, ac fringilla risus ultricies ut. Donec ac gravida magna. Mauris vulputate sapien non dolor
+                    lacinia, eget iaculis nisi tristique. Donec interdum ac enim a venenatis. Nulla pulvinar laoreet
+                    laoreet. Nullam vestibulum rhoncus urna eu auctor.
+                </pre-line>
+            </div>
+        </div>
+        <div class="w3-col s4">
+            <div class="w3-auto w3-green w3-round w3-padding-16 mainmargin">
+                <h3> Elektronika </h3>
+                <img src="eit.png" class="w3-opacity-min formated-image">
+                <pre-line>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget augue pellentesque est
+                    pellentesque
+                    venenatis ac ac ligula. Aliquam vel ligula nisl. Vestibulum ante ipsum primis in faucibus orci
+                    luctus et
+                    ultrices posuere cubilia Curae; Aliquam egestas eros eros, et mollis odio malesuada sed. Nulla in
+                    consequat tortor. Proin ultrices turpis eu ipsum ultrices lacinia. Donec sagittis magna vel euismod
+                    accumsan. Cras ac massa a est fringilla sollicitudin. Nam consectetur mollis lorem, rhoncus euismod
+                    metus placerat id. Duis lorem nulla, cursus id erat a, auctor facilisis ipsum. Ut porta justo sed
+                    elementum lobortis.
+                </pre-line>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-hide-small w3-auto">
+        <div class="w3-col s12">
+            <h1>
+                Wydział IET
+            </h1>
+        </div>
+        <div class="w3-col s4">
+            <div class="w3-auto w3-green w3-round w3-padding-16 mainmargin">
+                <h3> Informatyka </h3>
+                <img src="informatyka.png" class="w3-opacity-min formated-image">
+                <pre-line>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci nibh. Quisque dapibus quam
+                    massa, eget dignissim mauris tincidunt et. Suspendisse facilisis scelerisque urna, quis bibendum
+                    eros
+                    ullamcorper id. Aenean molestie sed felis blandit iaculis. Vivamus faucibus pharetra ligula et
+                    condimentum. Morbi accumsan rhoncus vulputate. Sed porta condimentum tempor. Nullam sed ultrices
+                    risus.
+                    Nam ullamcorper lectus ac nulla hendrerit, quis efficitur purus dictum.
+                    </pre>
+            </div>
+        </div>
+        <div class="w3-col s4">
+            <div class="w3-auto w3-green w3-round w3-padding-16 mainmargin">
+                <h3> EiT</h3>
+                <img src="elektronika.png" class="w3-opacity-min formated-image">
+                <pre-line>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor metus leo, et vehicula ex
+                    imperdiet vel. Pellentesque blandit, massa a blandit fringilla, mi velit commodo quam, id placerat
+                    nibh
+                    ex sit amet tortor. Donec rutrum lacus enim, sed tincidunt neque consectetur eu. Integer dignissim
+                    blandit lacus, sit amet iaculis eros convallis in. Nunc consectetur lacus molestie massa convallis
+                    laoreet. Cras massa tortor, dapibus eu dolor in, lobortis fermentum nisi. Cras non arcu molestie,
+                    consectetur elit id, ornare ex. Maecenas posuere nulla efficitur finibus mattis. Donec laoreet
+                    fringilla
+                    enim, ac fringilla risus ultricies ut. Donec ac gravida magna. Mauris vulputate sapien non dolor
+                    lacinia, eget iaculis nisi tristique. Donec interdum ac enim a venenatis. Nulla pulvinar laoreet
+                    laoreet. Nullam vestibulum rhoncus urna eu auctor.
+                </pre-line>
+            </div>
+        </div>
+        <div class="w3-col s4">
+            <div class="w3-auto w3-green w3-round w3-padding-16 mainmargin">
+                <h3> Elektronika </h3>
+                <img src="eit.png" class="w3-opacity-min formated-image">
+                <pre-line>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget augue pellentesque est
+                    pellentesque
+                    venenatis ac ac ligula. Aliquam vel ligula nisl. Vestibulum ante ipsum primis in faucibus orci
+                    luctus et
+                    ultrices posuere cubilia Curae; Aliquam egestas eros eros, et mollis odio malesuada sed. Nulla in
+                    consequat tortor. Proin ultrices turpis eu ipsum ultrices lacinia. Donec sagittis magna vel euismod
+                    accumsan. Cras ac massa a est fringilla sollicitudin. Nam consectetur mollis lorem, rhoncus euismod
+                    metus placerat id. Duis lorem nulla, cursus id erat a, auctor facilisis ipsum. Ut porta justo sed
+                    elementum lobortis.
+                </pre-line>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-amber w3-round w3-opacity-min middleelement">
+        <h3> Witaj! </h3>
+        <img id="animated" src="guest.png" class="w3-opacity formated-image">
+        <h4>
+            Strona dla studentów AGH
+        </h4>
+    </div>
+
+    <footer class="">
+        <!-- Tutaj treść stopki / Here the content of the footer -->
+        <a href="mailto:twoj.adres.email"></a>
+    </footer>
+
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("Demo1");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        function myFunction2() {
+            var x = document.getElementById("Demo2");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        function myFunction3() {
+            var x = document.getElementById("Demo3");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>
+        Thinking in Java
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-gavel "></i>Java Tutorial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduce.html">Introduce</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Objects
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="abstraction.html">Abstraction</a>
+                            <a class="dropdown-item" href="interfaces.html">Interfaces</a>
+                            <a class="dropdown-item" href="hierarchy.html">Hierarchy</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="summarry.html">Summary</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="operators.html">Operators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="author.html">Author</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 offset-md-3 w-100">
+                <h1> Operators </h1>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Introduce </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                        At the lowest level, data in Java is manipulated using operators.
+
+                        Because Java was inherited from C++, most of these operators will be familiar to C and C++
+                        programmers. Java has also added some improvements and simplifications.
+
+                        If you’re familiar with C or C++ syntax, you can skim through this chapter and the next,
+                        looking for places where Java is different from those languages. However, if you find yourself
+                        floundering a bit in these two chapters, make sure you go through the multimedia seminar
+                        Thinking in C, freely downloadable from www.MindView.net. It contains audio lectures,
+                        slides, exercises, and solutions specifically designed to bring you up to speed with the
+                        fundamentals necessary to learn Java. 
+                </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Simpler print statements </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                            In the previous chapter, you were introduced to the Java print statement:
+                            System.out.println("Rather a lot to type");
+                            You may observe that this is not only a lot to type (and thus many redundant tendon hits),
+                            but also rather noisy to read. Most languages before and after Java have taken a much
+                            simpler approach to such a commonly used statement.
+                            The Access Control chapter introduces the concept of the static import that was added to
+                            Java SE5, and creates a tiny library to simplify writing print statements. However, you don’t
+                            need to know those details in order to begin using that library. We can rewrite the program
+                            from the last chapter using this new library:
+                </pre>
+                <pre class="code">
+                            //: operators/HelloDate.java
+                            import java.util.*;
+                            import static net.mindview.util.Print.*;
+                            public class HelloDate {
+                            public static void main(String[] args) {
+                            print("Hello, it’s: ");
+                            print(new Date());
+                            }
+                            } /* Output: (55% match)
+                            Hello, it’s:
+                            Wed Oct 05 14:39:05 MDT 2005
+                            *///:~
+                </pre>
+                <pre>
+                            The results are much cleaner. Notice the insertion of the static keyword in the second
+                            import statement.
+                            In order to use this library, you must download this book’s code package from
+                            www.MindView.net or one of its mirrors. Unzip the code tree and add the root directory of
+                            that code tree to your computer’s CLASSPATH environment variable. (You’ll eventually get a
+                            full introduction to the classpath, but you might as well get used to struggling with it early.
+                            Alas, it is one of the more common battles you will have with Java.) 
+                </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Using Java Operators </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                        An operator takes one or more arguments and produces a new value. The arguments are in a
+                        different form than ordinary method calls, but the effect is the same. Addition and unary plus
+                        (+), subtraction and unary minus (-), multiplication (*), division (/), and assignment (=) all
+                        work much the same in any programming language.
+
+                        All operators produce a value from their operands. In addition, some operators change the
+                        value of an operand. This is called a side effect. The most common use for operators that
+                        modify their operands is to generate the side effect, but you should keep in mind that the
+                        value produced is available for your use, just as in operators without side effects.
+
+                        Almost all operators work only with primitives. The exceptions are ‘=‘, ‘==‘ and ‘!=‘, which
+                        work with all objects (and are a point of confusion for objects). In addition, the String class
+                        supports ‘+’ and ‘+=‘. 
+                </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Precedence </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                            Operator precedence defines how an expression evaluates when several operators are
+                            present. Java has specific rules that determine the order of evaluation. The easiest one to
+                            remember is that multiplication and division happen before addition and subtraction.
+                            Programmers often forget the other precedence rules, so you should use parentheses to make
+                            the order of evaluation explicit. For example, look at statements (1) and (2): 
+                    </pre>
+                <pre class="code">
+                            //: operators/Precedence.java
+                            public class Precedence {
+                             public static void main(String[] args) {
+                             int x = 1, y = 2, z = 3;
+                             int a = x + y - 2/2 + z; // (1)
+                             int b = x + (y - 2)/(2 + z); // (2)
+                             System.out.println("a = " + a + " b = " + b);
+                             }
+                            } /* Output:
+                            a = 5 b = 1
+                            *///:~ 
+                    </pre>
+                <pre>
+                            These statements look roughly the same, but from the output you can see that they have very
+                            different meanings which depend on the use of parentheses.
+
+                            Notice that the System.out.println( ) statement involves the ‘+’ operator. In this context,
+                            ‘+’ means “string concatenation” and, if necessary, “string conversion.” When the compiler
+                            sees a String followed by a ‘+’ followed by a non-String, it attempts to convert the nonString into a String. As you can see from the output, it successfully converts from int into
+                            String for a and b. 
+                    </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Assignment </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                                Assignment is performed with the operator =. It means “Take the value of the right-hand side
+                                (often called the rvalue) and copy it into the left-hand side (often called the lvalue)”. An
+                                rvalue is any constant, variable, or expression that produces a value, but an lvalue must be a
+                                distinct, named variable. (That is, there must be a physical space to store the value.) For
+                                instance, you can assign a constant value to a variable:                                 
+                        </pre>
+                <pre class="code">
+                                a = 4;  
+                        </pre>
+                <pre>
+                                but you cannot assign anything to a constant value—it cannot be an lvalue. (You can’t say 4 =
+                                a;.)
+
+                                Assignment of primitives is quite straightforward. Since the primitive holds the actual value
+                                and not a reference to an object, when you assign primitives, you copy the contents from one
+                                place to another. For example, if you say a = b for primitives, then the contents of b are
+                                copied into a. If you then go on to modify a, b is naturally unaffected by this modification. As
+                                a programmer, this is what you can expect for most situations.
+
+                                When you assign objects, however, things change. Whenever you manipulate an object, what
+                                you’re manipulating is the reference, so when you assign “from one object to another,” you’re
+                                actually copying a reference from one place to another. This means that if you say c = d for
+                                objects, you end up with both c and d pointing to the object that, originally, only d pointed
+                                to. Here’s an example that demonstrates this behavior: 
+                        </pre>
+                <pre class="code">
+                                //: operators/Assignment.java
+                                // Assignment with objects is a bit tricky.
+                                import static net.mindview.util.Print.*;
+                                class Tank {
+                                 int level;
+                                }
+                                public class Assignment {
+                                 public static void main(String[] args) {
+                                 Tank t1 = new Tank();
+                                 Tank t2 = new Tank();
+                                 t1.level = 9;
+                                 t2.level = 47;
+                                 print("1: t1.level: " + t1.level +
+                                 ", t2.level: " + t2.level);
+                                 t1 = t2;
+                                 print("2: t1.level: " + t1.level +
+                                 ", t2.level: " + t2.level);
+                                 t1.level = 27;
+                                 print("3: t1.level: " + t1.level +
+                                 ", t2.level: " + t2.level);
+                                 }
+                                } /* Output:
+                                1: t1.level: 9, t2.level: 47
+                                2: t1.level: 47, t2.level: 47
+                                3: t1.level: 27, t2.level: 27
+                                *///:~   
+                        </pre>
+                <pre>
+                                The Tank class is simple, and two instances (t1 and t2) are created within main( ). The
+                                level field within each Tank is given a different value, and then t2 is assigned to t1, and t1 is
+                                changed. In many programming languages you expect t1 and t2 to be independent at all
+                                times, but because you’ve assigned a reference, changing the t1 object appears to change the
+                                t2 object as well! This is because both t1 and t2 contain the same reference, which is
+                                pointing to the same object. (The original reference that was in t1, that pointed to the object
+                                holding a value of 9, was overwritten during the assignment and effectively lost; its object
+                                will be cleaned up by the garbage collector.)
+
+                                This phenomenon is often called aliasing, and it’s a fundamental way that Java works with
+                                objects. But what if you don’t want aliasing to occur in this case? You could forego the
+                                assignment and say: 
+                        </pre>
+                <pre class="code">
+                                t1.level = t2.level;   
+                        </pre>
+                <pre>
+                                This retains the two separate objects instead of discarding one and tying t1 and t2 to the
+                                same object. You’ll soon realize that manipulating the fields within objects is messy and goes
+                                against good object-oriented design principles. This is a nontrivial topic, so you should keep
+                                in mind that assignment for objects can add surprises.
+                                Exercise 2: (1) Create a class containing a float and use it to demonstrate aliasing.                                 
+                        </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Aliasing during method calls </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                                    Aliasing will also occur when you pass an object into a method: 
+                            </pre>
+                <pre class="code">
+                                    //: operators/PassObject.java
+                                    // Passing objects to methods may not be
+                                    // what you’re used to.
+                                    import static net.mindview.util.Print.*;
+                                    class Letter {
+                                     char c;
+                                    }
+                                    public class PassObject {
+                                     static void f(Letter y) {
+                                     y.c = ‘z’;
+                                     }
+                                     public static void main(String[] args) {
+                                     Letter x = new Letter();
+                                     x.c = ‘a’;
+                                     print("1: x.c: " + x.c);
+                                     f(x);
+                                     print("2: x.c: " + x.c);
+                                     }
+                                    } /* Output:
+                                    1: x.c: a
+                                    2: x.c: z
+                                    *///:~ 
+                            </pre>
+                <pre>
+                                    In many programming languages, the method f( ) would appear to be making a copy of its
+                                    argument Letter y inside the scope of the method. But once again a reference is being
+                                    passed, so the line:
+                            </pre>
+                <pre class="code">
+                                    y.c = ‘z’; 
+                            </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Aliasing during method calls </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                                    The basic mathematical operators are the same as the ones available in most programming
+                                    languages: addition (+), subtraction (-), division (/), multiplication (*) and modulus (%,
+                                    which produces the remainder from integer division). Integer division truncates, rather than
+                                    rounds, the result.
+                                    Java also uses the shorthand notation from C/C++ that performs an operation and an
+                                    assignment at the same time. This is denoted by an operator followed by an equal sign, and is
+                                    consistent with all the operators in the language (whenever it makes sense). For example, to
+                                    add 4 to the variable x and assign the result to x, use: x += 4.
+                                    This example shows the use of the mathematical operators: 
+                                </pre>
+                <pre class="code">
+                                        //: operators/MathOps.java
+                                        // Demonstrates the mathematical operators.
+                                        import java.util.*;
+                                        import static net.mindview.util.Print.*;
+                                        public class MathOps {
+                                         public static void main(String[] args) {
+                                         // Create a seeded random number generator:
+                                         Random rand = new Random(47);
+                                         int i, j, k;
+                                         // Choose value from 1 to 100:
+                                         j = rand.nextInt(100) + 1;
+                                         print("j : " + j);
+                                         k = rand.nextInt(100) + 1;
+                                         print("k : " + k);
+                                         i = j + k;
+                                         print("j + k : " + i);
+                                         i = j - k;
+                                         print("j - k : " + i);
+                                         i = k / j;
+                                         print("k / j : " + i);
+                                         i = k * j;
+                                         print("k * j : " + i);
+                                         i = k % j;
+                                         print("k % j : " + i);
+                                         j %= k;
+                                         print("j %= k : " + j);
+                                         // Floating-point number tests:
+                                         float u, v, w; // Applies to doubles, too
+                                         v = rand.nextFloat();
+                                         print("v : " + v);
+                                         w = rand.nextFloat();
+                                         print("w : " + w);
+                                         u = v + w;
+                                         print("v + w : " + u);
+                                         u = v - w;
+                                         print("v - w : " + u);
+                                         u = v * w;
+                                         print("v * w : " + u);
+                                         u = v / w;
+                                         print("v / w : " + u);
+                                         // The following also works for char,
+                                         // byte, short, int, long, and double:
+                                         u += v;
+                                         print("u += v : " + u);
+                                         u -= v;
+                                         print("u -= v : " + u);
+                                         u *= v;
+                                         print("u *= v : " + u);
+                                         u /= v;
+                                         print("u /= v : " + u);
+                                         }
+                                        } /* Output:
+                                        j : 59
+                                        k : 56
+                                        j + k : 115
+                                        j - k : 3
+                                        k / j : 0
+                                        k * j : 3304
+                                        k % j : 56
+                                        j %= k : 3
+                                        v : 0.5309454
+                                        w : 0.0534122
+                                        v + w : 0.5843576
+                                        v - w : 0.47753322
+                                        v * w : 0.028358962
+                                        v / w : 9.940527
+                                        u += v : 10.471473
+                                        u -= v : 9.940527
+                                        u *= v : 5.2778773
+                                        u /= v : 9.940527
+                                        *///:~ 
+                                </pre>
+                <pre>
+                                        To generate numbers, the program first creates a Random object. If you create a Random
+                                        object with no arguments, Java uses the current time as a seed for the random number
+                                        generator, and will thus produce different output for each execution of the program.
+                                        However, in the examples in this book, it is important that the output shown at the end of the
+                                        examples be as consistent as possible, so that this output can be verified with external tools.
+                                        By providing a seed (an initialization value for the random number generator that will always
+                                        produce the same sequence for a particular seed value) when creating the Random object,
+                                        the same random numbers will be generated each time the program is executed, so the
+                                        output is verifiable.1 To generate more varying output, feel free to remove the seed in the
+                                        examples in the book.
+                                        The program generates a number of different types of random numbers with the Random
+                                        object simply by calling the methods nextInt( ) and nextFloat( ) (you can also call
+                                        nextLong( ) or nextDouble( )). The argument to nextInt( ) sets the upper bound on the
+                                        generated number. The lower bound is zero, which we don’t want because of the possibility of
+                                        a divide-by-zero, so the result is offset by one.
+                                        Exercise 4: (
+                                </pre>
+                <pre class="code">
+                                        y.c = ‘z’; 
+                                </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Bitwise operators </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                        The bitwise operators allow you to manipulate individual bits in an integral primitive data
+                        type. Bitwise operators perform Boolean algebra on the corresponding bits in the two
+                        arguments to produce the result.
+
+                        The bitwise operators come from C’s low-level orientation, where you often manipulate
+                        hardware directly and must set the bits in hardware registers. Java was originally designed to
+                        be embedded in TV set-top boxes, so this low-level orientation still made sense. However,
+                        you probably won’t use the bitwise operators much. 
+
+                        The bitwise AND operator (&) produces a one in the output bit if both input bits are one;
+                        otherwise, it produces a zero. The bitwise OR operator (|) produces a one in the output bit if
+                        either input bit is a one and produces a zero only if both input bits are zero. The bitwise
+                        EXCLUSIVE OR, or XOR (^), produces a one in the output bit if one or the other input bit is
+                        a one, but not both. The bitwise NOT (~, also called the ones complement operator) is a
+                        unary operator; it takes only one argument. (All other bitwise operators are binary
+                        operators.) Bitwise NOT produces the opposite of the input bit—a one if the input bit is zero,
+                        a zero if the input bit is one.
+
+                        The bitwise operators and logical operators use the same characters, so it is helpful to have a
+                        mnemonic device to help you remember the meanings: Because bits are “small”, there is only
+                        one character in the bitwise operators.
+
+                        Bitwise operators can be combined with the = sign to unite the operation and assignment:
+                        &=, |= and ^= are all legitimate. (Since ~ is a unary operator, it cannot be combined with
+                        the = sign.)
+                        The boolean type is treated as a one-bit value, so it is somewhat different. You can perform
+                        a bitwise AND, OR, and XOR, but you can’t perform a bitwise NOT (presumably to prevent
+                        confusion with the logical NOT). For booleans, the bitwise operators have the same effect as
+                        the logical operators except that they do not short circuit. Also, bitwise operations on
+                        booleans include an XOR logical operator that is not included under the list of “logical”
+                        operators. You cannot use booleans in shift expressions, which are described next.
+                        
+                        Exercise 10: (3) Write a program with two constant values, one with alternating binary
+                        ones and zeroes, with a zero in the least-significant digit, and the second, also alternating,
+                        with a one in the least-significant digit (hint: It’s easiest to use hexadecimal constants for
+                        this). Take these two values and combine them in all possible ways using the bitwise
+                        operators, and display the results using Integer.toBinaryString( ).
+                </pre>
+            </div>
+    </main>
+
+    <footer>
+        <!-- Tutaj treść stopki / Here the content of the footer -->
+        <h4>Oscar Teeninga </h4>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

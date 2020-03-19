@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>
+        Thinking in Java
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-gavel "></i>Java Tutorial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduce.html">Introduce</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Objects
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="abstraction.html">Abstraction</a>
+                            <a class="dropdown-item" href="interfaces.html">Interfaces</a>
+                            <a class="dropdown-item" href="hierarchy.html">Hierarchy</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="summarry.html">Summary</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="operators.html">Operators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="author.html">Author</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 offset-md-3 w-100">
+                <h1> Objects summary </h1>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Abstraction </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                    All programming languages provide abstractions. It can be argued that the complexity of the
+                    problems you’re able to solve is directly related to the kind and quality of abstraction. By
+                    “kind” I mean, “What is it that you are abstracting?” Assembly language is a small abstraction
+                    of the underlying machine. Many so-called “imperative” languages that followed (such as
+                    FORTRAN, BASIC, and C) were abstractions of assembly language. These languages are big
+                    improvements over assembly language, but their primary abstraction still requires you to
+                    think in terms of the structure of the computer rather than the structure of the problem you
+                    are trying to solve. The programmer must establish the association between the machine
+                    model (in the “solution space,” which is the place where you’re implementing that solution,
+                    such as a computer) and the model of the problem that is actually being solved (in the 
+                    “problem space,” which is the place where the problem exists, such as a business). The effort
+                    required to perform this mapping, and the fact that it is extrinsic to the programming
+                    language, produces programs that are difficult to write and expensive to maintain, and as a
+                    side effect created the entire “programming methods” industry.
+
+                    The alternative to modeling the machine is to model the problem you’re trying to solve. Early
+                    languages such as LISP and APL chose particular views of the world (“All problems are
+                    ultimately lists” or “All problems are algorithmic,” respectively). Prolog casts all problems
+                    into chains of decisions. Languages have been created for constraint-based programming and
+                    for programming exclusively by manipulating graphical symbols. (The latter proved to be too
+                    restrictive.) Each of these approaches may be a good solution to the particular class of
+                    problem they’re designed to solve, but when you step outside of that domain they become
+                    awkward.
+
+                    The object-oriented approach goes a step further by providing tools for the programmer to
+                    represent elements in the problem space. This representation is general enough that the
+                    programmer is not constrained to any particular type of problem. We refer to the elements in
+                    the problem space and their representations in the solution space as “objects.” (You will also
+                    need other objects that don’t have problem-space analogs.) The idea is that the program is
+                    allowed to adapt itself to the lingo of the problem by adding new types of objects, so when
+                    you read the code describing the solution, you’re reading words that also express the
+                    problem. This is a more flexible and powerful language abstraction than what we’ve had
+                    before.1 Thus, OOP allows you to describe the problem in terms of the problem, rather than
+                    in terms of the computer where the solution will run. There’s still a connection back to the
+                    computer: Each object looks quite a bit like a little computer—it has a state, and it has
+                    operations that you can ask it to perform. However, this doesn’t seem like such a bad analogy
+                    to objects in the real world—they all have characteristics and behaviors. 
+                </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Interfaces </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                        Aristotle was probably the first to begin a careful study of the concept of type; he spoke of
+                        “the class of fishes and the class of birds.” The idea that all objects, while being unique, are
+                        also part of a class of objects that have characteristics and behaviors in common was used
+                        directly in the first object-oriented language, Simula-67, with its fundamental keyword class
+                        that introduces a new type into a program.
+    
+                        Simula, as its name implies, was created for developing simulations such as the classic “bank
+                        teller problem.” In this, you have numerous tellers, customers, accounts, transactions, and
+                        units of money—a lot of “objects.” Objects that are identical except for their state during a
+                        program’s execution are grouped together into “classes of objects,” and that’s where the
+                        keyword class came from. Creating abstract data types (classes) is a fundamental concept in
+                        object-oriented programming. Abstract data types work almost exactly like built-in types:
+                        You can create variables of a type (called objects or instances in object-oriented parlance)
+                        and manipulate those variables (called sending messages or requests; you send a message
+                        and the object figures out what to do with it). The members (elements) of each class share
+                        some commonality: Every account has a balance, every teller can accept a deposit, etc. At the
+                        same time, each member has its own state: Each account has a different balance, each teller
+                        has a name. Thus, the tellers, customers, accounts, transactions, etc., can each be
+                        represented with a unique entity in the computer program. This entity is the object, and each
+                        object belongs to a particular class that defines its characteristics and behaviors.
+    
+                        So, although what we really do in object-oriented programming is create new data types,
+                        virtually all object-oriented programming languages use the “class” keyword. When you see
+                        the word “type” think “class” and vice versa.
+    
+                        Since a class describes a set of objects that have identical characteristics (data elements) and
+                        behaviors (functionality), a class is really a data type because a floating point number, for
+                        example, also has a set of characteristics and behaviors. The difference is that a programmer
+                        defines a class to fit a problem rather than being forced to use an existing data type that was
+                        designed to represent a unit of storage in a machine. You extend the programming language
+                        by adding new data types specific to your needs. The programming system welcomes the new
+                        classes and gives them all the care and type checking that it gives to built-in types.
+                        The object-oriented approach is not limited to building simulations. Whether or not you
+                        agree that any program is a simulation of the system you’re designing, the use of OOP
+                        techniques can easily reduce a large set of problems to a simple solution.
+                                                                                    
+                        Once a class is established, you can make as many objects of that class as you like, and then
+                        manipulate those objects as if they are the elements that exist in the problem you are trying
+                        to solve. Indeed, one of the challenges of object-oriented programming is to create 
+                        a one-toone mapping between the elements in the problem space and objects in the solution space.
+                        But how do you get an object to do useful work for you? There needs to be a way to make a
+                        request of the object so that it will do something, such as complete a transaction, draw
+                        something on the screen, or turn on a switch. And each object can satisfy only certain
+                        requests. The requests you can make of an object are defined by its interface, and the type is
+                        what determines the interface. A simple example might be a representation of a light bulb:
+                    </pre>
+                <img src="bulb.png" style="width: 70%; height: auto;">
+                <pre>
+                        The interface determines the requests that you can make for a particular object. However,
+                        there must be code somewhere to satisfy that request. This, along with the hidden data,
+                        comprises the implementation. From a procedural programming standpoint, it’s not that
+                        complicated. A type has a method associated with each possible request, and when you make
+                        a particular request to an object, that method is called. This process is usually summarized by
+                        saying that you “send a message” (make a request) to an object, and the object figures out
+                        what to do with that message (it executes code).
+    
+                        Here, the name of the type/class is Light, the name of this particular Light object is lt, and
+                        the requests that you can make of a Light object are to turn it on, turn it off, make it
+                        brighter, or make it dimmer. You create a Light object by defining a “reference” (lt) for that
+                        object and calling new to request a new object of that type. To send a message to the object,
+                        you state the name of the object and connect it to the message request with a period (dot).
+                        From the standpoint of the user of a predefined class, that’s pretty much all there is to
+                        programming with objects.
+    
+                        The preceding diagram follows the format of the Unified Modeling Language (UML). Each
+                        class is represented by a box, with the type name in the top portion of the box, any data
+                        members that you care to describe in the middle portion of the box, and the methods (the
+                        functions that belong to this object, which receive any messages you send to that object) in
+                        the bottom portion of the box. Often, only the name of the class and the public methods are
+                        shown in UML design diagrams, so the middle portion is not shown, as in this case. If you’re
+                        interested only in the class name, then the bottom portion doesn’t need to be shown, either. 
+                    </pre>
+            </div>
+            <div class="col-12 col-sm-12 w-100">
+                <h3> Hierarchy </h3>
+            </div>
+            <div class="col-12 textbox">
+                <pre>
+                        One of the issues in OOP that has become especially prominent since the introduction of C++
+                        is whether all classes should ultimately be inherited from a single base class. In Java (as with
+                        virtually all other OOP languages except for C++) the answer is yes, and the name of this
+                        ultimate base class is simply Object. It turns out that the benefits of the singly rooted
+                        hierarchy are many.
+    
+                        All objects in a singly rooted hierarchy have an interface in common, so they are all
+                        ultimately the same fundamental type. The alternative (provided by C++) is that you don’t
+                        know that everything is the same basic type. From a backward-compatibility standpoint this
+                        fits the model of C better and can be thought of as less restrictive, but when you want to do
+                        full-on objectoriented programming you must then build your own hierarchy to provide the
+                        same convenience that’s built into other OOP languages. And in any new class library you
+                        acquire, some other incompatible interface will be used. It requires effort (and possibly
+                        multiple inheritance) to work the new interface into your design. Is the extra “flexibility” of
+                        C++ worth it? If you need it—if you have a large investment in C—it’s quite valuable. If you’re
+                        starting from scratch, other alternatives such as Java can often be more productive.
+                        All objects in a singly rooted hierarchy can be guaranteed to have certain functionality. You
+                        know you can perform certain basic operations on every object in your system. All objects can
+                        easily be created on the heap, and argument passing is greatly simplified.
+    
+                        A singly rooted hierarchy makes it much easier to implement a garbage collector, which is
+                        one of the fundamental improvements of Java over C++. And since information about the
+                        type of an object is guaranteed to be in all objects, you’ll never end up with an object whose
+                        type you cannot determine. This is especially important with system-level operations, such as
+                        exception handling, and to allow greater flexibility in programming. 
+    
+                        In general, you don’t know how many objects you’re going to need to solve a particular
+                        problem, or how long they will last. You also don’t know how to store those objects. How can
+                        you know how much space to create if that information isn’t known until run time?
+    
+                        The solution to most problems in object-oriented design seems flippant: You create another
+                        type of object. The new type of object that solves this particular problem holds references to
+                        other objects. Of course, you can do the same thing with an array, which is available in most
+                        languages. But this new object, generally called a container (also called a collection, but the
+                        Java library uses that term in a different sense so this book will use “container”), will expand
+                        itself whenever necessary to accommodate everything you place inside it. So you don’t need
+                        to know how many objects you’re going to hold in a container. Just create a container object
+                        and let it take care of the details.
+    
+                        Fortunately, a good OOP language comes with a set of containers as part of the package. In
+                        C++, it’s part of the Standard C++ Library and is often called the Standard Template Library
+                        (STL). Smalltalk has a very complete set of containers. Java also has numerous containers in
+                        its standard library. In some libraries, one or two generic containers is considered good
+                        enough for all needs, and in others (Java, for example) the library has different types of
+                        containers for different needs: several different kinds of List classes (to hold sequences),
+                        Maps (also known as associative arrays, to associate objects with other objects), Sets (to
+                        hold one of each type of object), and more components such as queues, trees, stacks, etc.
+    
+                        From a design standpoint, all you really want is a container that can be manipulated to solve
+                        your problem. If a single type of container satisfied all of your needs, there’d be no reason to
+                        have different kinds. There are two reasons that you need a choice of containers. First,
+                        containers provide different types of interfaces and external behavior. A stack has a different
+                        interface and behavior than a queue, which is different from a set or a list. One of these might
+                        provide a more flexible solution to your problem than the other. Second, different containers
+                        have different efficiencies for certain operations. For example, there are two basic types of
+                        List: ArrayList and LinkedList. Both are simple sequences that can have identical
+                        interfaces and external behaviors. But certain operations can have significantly different
+                        costs. Randomly accessing elements in an ArrayList is a constant-time operation; it takes
+                        the same amount of time regardless of the element you select. However, in a LinkedList it is
+                        expensive to move through the list to randomly select an element, and it takes longer to find
+                        an element that is farther down the list. On the other hand, if you want to insert an element
+                        in the middle of a sequence, it’s cheaper in a LinkedList than in an ArrayList. These and
+                        other operations have different efficiencies depending on the underlying structure of the
+                        sequence. You might start building your program with a LinkedList and, when tuning for
+                        performance, change to an ArrayList. Because of the abstraction via the interface List, you
+                        can change from one to the other with minimal impact on your code. 
+                    </pre>
+            </div>
+    </main>
+
+    <footer>
+        <!-- Tutaj treść stopki / Here the content of the footer -->
+        <h4>Oscar Teeninga </h4>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
